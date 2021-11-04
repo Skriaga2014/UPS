@@ -1,7 +1,10 @@
+"""
+Отслеживание отправлений курьерской солужбы UPS
+"""
+
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import time
-import os
 import pandas as pd
 from datetime import datetime as dt
 from selenium.webdriver.common.by import By
@@ -113,6 +116,7 @@ def start():
 
     driver.quit()
 
+
 options = webdriver.ChromeOptions()
 #options.add_argument('headless')
 pd.set_option('display.expand_frame_repr', False)
@@ -122,18 +126,4 @@ while True:
     start()
     driver.quit()
     time_out('10:00')   # str 'minutes:seconds' or int/str seconds
-
-
-#num1 = Track(*['1ZR437760443042901', '2021-09-30', 'comment', '125167'])
-
-
-
-
-
-
-
-
-
-
-
 
