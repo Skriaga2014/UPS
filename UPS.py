@@ -103,8 +103,6 @@ def start():
         base['index'] = ''
     print(base)
 
-    #base = base.loc[(base['date'].dt.date < dt.now().date()) & (base['track'] != '')]
-
     for line in base.iterrows():
         a = Track(line[1])
         print(a)
